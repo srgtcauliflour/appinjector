@@ -18,7 +18,7 @@ import (
 )
 
 type BasicAuth struct {
-	Enable   bool   `yaml:"enable"`
+	Enable   bool   `yaml:"disable"`
 	Username string `yaml:"username"`
 	Password string `yaml:"password"`
 }
@@ -81,8 +81,8 @@ func createDefaultFile() *File {
 		ServerUrl:           "http://localhost:8080",
 		RedirectHttps:       false,
 		SaveDir:             "data",
-		SignTimeoutMins:     30,
-		CleanupIntervalMins: 1,
+		SignTimeoutMins:     120,
+		CleanupIntervalMins: 120,
 		BasicAuth: BasicAuth{
 			Enable:   false,
 			Username: "admin",
